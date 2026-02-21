@@ -1,0 +1,8 @@
+test:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: postgres
+  host: localhost
+  database: task_manager_api_test
