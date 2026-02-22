@@ -69,6 +69,52 @@ rails server
 
 L'API sera accessible sur `http://localhost:3000`
 
+
+## 🐳 Installation avec Docker (Recommandé)
+
+### Prérequis
+
+- Docker Desktop
+- Docker Compose
+
+### Lancement
+```bash
+# Cloner le repository
+git clone https://github.com/giresse21/task-manager-api.git
+cd task-manager-api
+
+# Démarrer l'application
+docker-compose up --build
+
+# L'application sera accessible sur http://localhost:3000
+```
+
+### Commandes Docker utiles
+```bash
+# Démarrer les services
+docker-compose up
+
+# Arrêter les services
+docker-compose down
+
+# Voir les logs
+docker-compose logs -f
+
+# Exécuter les tests
+docker-compose exec web bundle exec rspec
+
+# Ouvrir la console Rails
+docker-compose exec web rails console
+
+# Exécuter les migrations
+docker-compose exec web rails db:migrate
+```
+
+### Ports
+
+- API : http://localhost:3000
+- PostgreSQL : localhost:5432
+
 ## 🔑 API Endpoints
 
 ### Authentification
